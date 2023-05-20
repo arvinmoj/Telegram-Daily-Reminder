@@ -1,9 +1,10 @@
 #!/bin/bash
 
 # ENV
-TELEGRAM_API_KEY=$(cat .env | grep TELEGRAM_API_KEY | cut -d '=' -f 2)
+CHAT_ID=$(cat .env | grep CHAT_ID | cut -d '=' -f 2)
 OPENAI_API_KEY=$(cat .env | grep OPENAI_API_KEY | cut -d '=' -f 2)
-CHAT_ID="@Darwin_Remainder"
+TELEGRAM_API_KEY=$(cat .env | grep TELEGRAM_API_KEY | cut -d '=' -f 2)
+
 URL="https://api.telegram.org/bot$TELEGRAM_API_KEY/sendMessage"
 
 #Accepting the two dates from the user
